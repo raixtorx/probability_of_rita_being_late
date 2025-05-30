@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 from ..utils.time_utils import *
-from ..probability.probability import generate_lateness_probabilities_seconds
 
 def plot_lateness_probabilities(
         values: list[tuple[int, float]], 
@@ -33,10 +32,10 @@ def plot_lateness_probabilities(
     plt.legend()
     plt.show()
 
-
+# Example
 if __name__ == "__main__":
     start = str_time_to_seconds("08:00")
     end = str_time_to_seconds("09:00")
-    values = generate_lateness_probabilities_seconds(start_sec=start, end_sec=end, step_sec=30)
+    values = [(100, 0.532), (200, 0.137), (300, 0.874), (400, 0.456), (500, 0.293)]
 
     plot_lateness_probabilities(values)
