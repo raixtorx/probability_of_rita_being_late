@@ -3,7 +3,9 @@ from ..utils.time_utils import *
 
 def plot_lateness_probabilities(
         values: list[tuple[int, float]], 
-        title=""):
+        title="",
+        xlabel: str = "",
+        ylabel: str = ""):
     """
     Plot Rita's probability of being late over leave home times.
 
@@ -19,8 +21,8 @@ def plot_lateness_probabilities(
     plt.figure(figsize=(10, 5))
     plt.plot(leave_times_sec, probabilities, color="orange", label="Probability of Being Late")
 
-    plt.xlabel("time leaving home")
-    plt.ylabel("P(late to meeting)")
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
     plt.title(title)
     plt.grid(True)
     plt.tight_layout()
@@ -38,4 +40,4 @@ if __name__ == "__main__":
     end = str_time_to_seconds("09:00")
     values = [(100, 0.532), (200, 0.137), (300, 0.874), (400, 0.456), (500, 0.293)]
 
-    plot_lateness_probabilities(values)
+    plot_lateness_probabilities(values, "Plot")

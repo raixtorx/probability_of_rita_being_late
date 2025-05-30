@@ -12,7 +12,7 @@ def main():
     values = generate_lateness_probabilities_seconds(start_sec=start_sec, end_sec=end_sec, step_sec=30)
     
     # Plot the probabilities
-    plot_lateness_probabilities(values)
+    plot_lateness_probabilities(values, "Probability of Being Late", "time leaving home", "P(late to meeting)")
 
 if __name__ == "__main__":
     main()
