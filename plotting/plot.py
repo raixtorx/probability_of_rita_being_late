@@ -3,7 +3,7 @@ from ..utils.time_utils import *
 
 def plot_lateness_probabilities(
         values: list[tuple[int, float]], 
-        title="",
+        title: str ="",
         xlabel: str = "",
         ylabel: str = ""):
     """

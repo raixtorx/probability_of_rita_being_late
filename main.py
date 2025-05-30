@@ -8,7 +8,7 @@ def main():
     start_sec = str_time_to_seconds(start_time)
     end_sec = str_time_to_seconds(end_time)
     
-    # Generate lateness probabilities every 5 minutes (300 seconds)
+    # Generate lateness probabilities every 30 seconds.
     values = generate_lateness_probabilities_seconds(start_sec=start_sec, end_sec=end_sec, step_sec=30)
     
     # Plot the probabilities
