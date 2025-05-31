@@ -30,3 +30,10 @@ probability_of_rita_being_late/
 │   └── time_utils.py             # time -> string and string -> time conversion
 └── README.md
 ```
+
+---
+
+## Future Improvements
+
+- Integrate live or scheduled bus data: Scrape or use an API to use actual bus departure and arrival times.
+- Explore alternative probability distributions and implement those on graph.
